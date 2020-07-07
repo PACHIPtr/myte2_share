@@ -4525,3 +4525,6 @@
 
 "GUILD_RANK_SYSTEM_NO_GUILD";
 "Bir lonca bulunamadý!";
+
+"ESYA_TOPLANDI: %s";
+"Kazandýn: %s";

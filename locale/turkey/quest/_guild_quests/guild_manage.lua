@@ -152,14 +152,11 @@ quest guild_building begin
 
                 when guild_man1.chat."Yeni Lonca kur" or
                         guild_man2.chat."Yeni Lonca kur" or
-                        guild_man3.chat."Yeni Lonca kur"
-						with (not pc.hasguild() and npc.empire == pc.empire) begin
+			guild_man3.chat."Yeni Lonca kur" with not pc.hasguild() or not pc.isguildmaster() begin
+			----with (pc.is_gm() or npc.empire == pc.empire)
                         --------------------------------------------------------------
                         local level_limit;
-                        local guild_create_item
-
                         level_limit = 40
-                        guild_create_item = false
                         -----------------------------------------------------------------------
 
                         if pc.hasguild() then
@@ -199,27 +196,21 @@ quest guild_building begin
                                 return
                         end
 
-                        if pc.level >= 40 then
-                        if pc.gold >= 200000 then
-
-				if not guild_create_item or pc.countitem(guild_create_item)>0 then
-                                        game.request_make_guild()
-                                end
-
-                                else
-                                say_title("Köy Gardiyaný:")
+                        if pc.get_level() < 40 then
+                                say_title("Köy Gardiyaný: ")
                                 say("")
-                                say("Yeterli Yang yok!")
-                                say("")
+                                say_reward("Seviyeniz yeterli deðil.")
                                 return
-                                end
-                        else
-                        say_title("Köy Gardiyaný:")
-                        say("")
-                        say("Seviyen lonca kurmak için ")
-                        say("yeterli deðil. ")
-
                         end
+
+                        if pc.get_money() < 200000 then
+                                say_title("Köy Gardiyaný: ")
+                                say("")
+                                say_reward("Yeterli miktarda Yang'a sahip deðilsin.")
+                                return
+                        end
+
+                        game.request_make_guild()
                 end
         end
 end

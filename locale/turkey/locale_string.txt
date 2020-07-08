@@ -4299,7 +4299,7 @@
 "Sadece bir adet ejderha tanrý eþyasý kullanabilirsin.";
 
 "RARE_POINTS_MAX";
-"<Evrim Çantasý> Silahýnda maksimum 8750 evrim puaný taþýyabilirsin.";
+"<Evrim Çantasý> Silahýnda maksimum 150 evrim puaný taþýyabilirsin.";
 
 "SAVAS_IZIN_LONCA";
 "<Guild> Giriþ iznin olmadýðý için savaþa giremezsin.";

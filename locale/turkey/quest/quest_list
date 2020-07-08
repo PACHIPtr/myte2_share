@@ -152,3 +152,4 @@ _talk_quests/spider_dungeon_2floor.lua
 _talk_quests/warehouse.lua
 _talk_quests/cube_opener_list.lua
 _talk_quests/npc_menu.lua
+_talk_quests/aura.lua

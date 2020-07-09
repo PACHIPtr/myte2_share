@@ -4528,3 +4528,9 @@
 
 "ESYA_TOPLANDI: %s";
 "Kazandýn: %s";
+
+"SAFEBOX_MONEY_MUCH";
+"Deponda çok fazla Yang taþýyorsun.";
+
+"SAFEBOX_CHEQUE_MUCH";
+"Deponda çok fazla Won taþýyorsun.";

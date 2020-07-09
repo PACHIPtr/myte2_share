@@ -20,12 +20,12 @@ quest changelook begin
 			end
 			
 			setskin(NOWINDOW)
-			pc.open_changelook(true, false)
+			pc.open_changelook(false)
 		end
 		
 		when 20406.chat."Binek dönüþümü " with utils.is_feature_changelook_enabled() == true begin
 			setskin(NOWINDOW)
-			pc.open_changelook(true, true)
+			pc.open_changelook(true)
 		end
 	end
 end
